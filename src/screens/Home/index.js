@@ -18,10 +18,15 @@ const HomeScreen = ({ navigation }) => {
       <FlatList
         data={toDos}
         renderItem={({ item }) => (
-          <ToDoItem title={item.title} content={item.content} />
+          <ToDoItem
+            title={item.title}
+            content={item.content}
+            onPress={() => navigation.navigate('DetailScreen', item)}
+          />
         )}
       />
       <FloatingAction
+        color='#8598FF'
         onPressMain={() => {
           navigation.navigate('AddToDoScreen')
         }}
