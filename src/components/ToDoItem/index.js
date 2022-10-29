@@ -3,12 +3,12 @@ import React from 'react'
 
 const ToDoItem = ({
   title,
-  desc,
+  content,
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
-      <Text style={styles.desc}>{desc}</Text>
+      <Text style={styles.content}>{content}</Text>
     </View>
   )
 }
@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     marginHorizontal: 16,
+    marginVertical: 4,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
     borderRadius: 12,
     overflow: 'hidden',
     shadowColor: '#020202',
@@ -34,7 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#020202',
   },
-  desc: {
+  content: {
     fontSize: 12,
     color: '#020202',
   },

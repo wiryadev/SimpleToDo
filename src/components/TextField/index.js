@@ -1,9 +1,8 @@
 import React from "react"
-import { Text, TextInput, View } from "react-native"
+import { StyleSheet, Text, TextInput, View } from "react-native"
 
 const TextField = ({
   label,
-  placeholder,
   onChangeText,
   ...props
 }) => {
@@ -12,9 +11,9 @@ const TextField = ({
       <Text style={styles.label}>{label}</Text>
       <TextInput
         style={styles.input}
-        placeholder={placeholder}
         onChangeText={onChangeText}
-        {...props} />
+        {...props} 
+        />
     </View>
   )
 }
@@ -25,6 +24,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 14,
     color: '#020202',
+    marginBottom: 4,
   },
   input: {
     borderWidth: 1,
