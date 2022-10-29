@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import AddToDoScreen from "../screens/AddToDo"
 import DetailScreen from "../screens/Detail"
 import HomeScreen from "../screens/Home"
 
@@ -18,6 +19,10 @@ export default Navigation = () => {
       <Stack.Screen
         name="DetailScreen"
         component={DetailScreen}
+      />
+      <Stack.Screen
+        name="AddToDoScreen"
+        component={AddToDoScreen}
       />
     </Stack.Navigator>
   )
